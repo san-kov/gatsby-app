@@ -81,16 +81,7 @@ const IndexPage = () => (
         return (
           <PostsWrapper>
             {allMarkdownRemark.edges.map((edge, i) => (
-              <Link
-                className="post-card"
-                to={`/posts${edge.node.frontmatter.slug}`}
-              >
-                <div class="post-img">
-                  <img
-                    src={edge.node.frontmatter.cover}
-                    alt="typescript-react"
-                  />
-                </div>
+              <Link to={`/posts${edge.node.frontmatter.slug}`}>
                 <div class="title">{edge.node.frontmatter.title}</div>
               </Link>
             ))}

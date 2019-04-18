@@ -25,9 +25,9 @@ const Layout = ({ children, style }) => (
             description
           }
         }
-        file(relativePath: { regex: "/bg/" }) {
+        file(relativePath: { regex: "/gabriel/" }) {
           childImageSharp {
-            fluid(maxWidth: 1000) {
+            fluid(maxWidth: 2000) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -47,7 +47,6 @@ const Layout = ({ children, style }) => (
           }}
         >
           <main>{children}</main>
-          <Img fluid={data.file.childImageSharp.fluid} />
           {/* <Postslsit /> */}
           {/* <footer>© {new Date().getFullYear()} san-kov</footer> */}
         </div>
